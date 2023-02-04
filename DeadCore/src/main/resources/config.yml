@@ -1,0 +1,13 @@
+Config:
+  Mensaje-Discord: '&4&lDEADCRAFT &9» &fConsigue soporte en el discord oficial'
+  Mensaje-Survival: '&4&lDEADCRAFT &8» &aModo de juego cambiado a &6Survival'
+  Mensaje-Creativo: '&4&lDEADCRAFT &8» &aModo de juego cambiado a &6Creativo'
+  Mensaje-Espectador: '&4&lDEADCRAFT &8» &aModo de juego cambiado a &6Espectador'
+  Mensaje-Aventura: '&b&lHY &8» &aModo de juego cambiado a &6Aventura'
+  Fly-Activado: '&4&lDEADCRAFT &8» &fModo de vuelo &aActivado!'
+  Fly-Desactivado: '&4&lDEADCRAFT &8» &fModo de vuelo &cDesactivado!'
+  Fly-SinPermisos: '&4&lDEADCRAFT &8» &cNo tienes permiso para eso'
+  Mensaje-Tienda: ""
+  Mensaje-Twitter: ""
+  Mensaje-Titulo: "&4&lBIENVENIDO"
+  Mensaje-Subtitle: "&fAla Pesadilla!"

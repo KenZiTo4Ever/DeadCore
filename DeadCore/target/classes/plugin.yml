@@ -1,0 +1,27 @@
+name: DeadCore
+version: '1.0-SNAPSHOT'
+main: hystudio.deadcore
+api-version: 1.18
+authors: [ HyStudio ]
+description: owo
+
+commands:
+  gm:
+    description: comando para modos de juego
+    default: OP
+  fly:
+    description: comando para modos de juego
+  deadcore:
+    description: los comandos insanos
+  set:
+    description: aowo
+  world:
+    description: mundo
+  heal:
+    description: heal
+  tpall:
+    description: tpall
+  sb:
+    description: scoreboad
+  tormenta:
+    description: tormenta owo
