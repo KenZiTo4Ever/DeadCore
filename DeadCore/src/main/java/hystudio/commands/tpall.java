@@ -2,7 +2,6 @@ package hystudio.commands;
 
 
 import hystudio.deadcore;
-import hystudio.utils.CC;
 import org.bukkit.Bukkit;
 import org.bukkit.GameRule;
 import org.bukkit.Sound;
@@ -23,7 +22,7 @@ public class tpall implements CommandExecutor {
             String locX = String.valueOf(player.getLocation().getBlockX());
             String locY = String.valueOf(player.getLocation().getBlockY());
             String locZ = String.valueOf(player.getLocation().getBlockZ());
-            player.sendTitle(CC.translate("&b&lTP"), CC.translate("&fJUGADORES TELETRANSPORTADOS"),20,20,20);
+            player.sendTitle(dev.bopi.Utilidades.CC.translate("&b&lTP"), dev.bopi.Utilidades.CC.translate("&fJUGADORES TELETRANSPORTADOS"),20,20,20);
                     player.sendMessage(deadcore.colorize("#dcffff | Has teletransportado a todos los jugadores a tu posicion actual!"));
             player.getWorld().playSound(player.getLocation(), Sound.BLOCK_LAVA_POP, 10.0F, 1.0F);
             world.setGameRule(GameRule.SEND_COMMAND_FEEDBACK, Boolean.valueOf(false));

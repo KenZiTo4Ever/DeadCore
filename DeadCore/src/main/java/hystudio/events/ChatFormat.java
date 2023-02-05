@@ -1,7 +1,6 @@
 package hystudio.events;
 
 import hystudio.deadcore;
-import hystudio.utils.CC;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,7 +14,7 @@ public class ChatFormat implements Listener {
     @EventHandler
     public void chatFormat(AsyncPlayerChatEvent event) {
         Player p = event.getPlayer();
-        event.setFormat(CC.translate("&e⚠ ") +  p.getDisplayName() + deadcore.colorize("#545454 » #AEAEAE") + event.getMessage());
+        event.setFormat(dev.bopi.Utilidades.CC.translate("&e⚠ ") +  p.getDisplayName() + deadcore.colorize("#545454 » #AEAEAE") + event.getMessage());
     }
 }
 

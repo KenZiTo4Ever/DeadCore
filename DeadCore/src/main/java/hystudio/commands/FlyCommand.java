@@ -1,7 +1,6 @@
 package hystudio.commands;
 
 import hystudio.deadcore;
-import hystudio.utils.CC;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,7 +19,7 @@ public class FlyCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            CC.log("&c&l| &r&eEste comando no se puede ejecutar por medio de consola");
+            dev.bopi.Utilidades.CC.log("&c&l| &r&eEste comando no se puede ejecutar por medio de consola");
             return false;
         }
         FileConfiguration config = this.plugin.getConfig();

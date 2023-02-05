@@ -1,7 +1,6 @@
 package hystudio.gamemode;
 
 import hystudio.deadcore;
-import hystudio.utils.CC;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;

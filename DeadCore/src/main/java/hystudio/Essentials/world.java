@@ -3,7 +3,7 @@ package hystudio.Essentials;
 import hystudio.deadcore;
 import java.util.ArrayList;
 import java.util.List;
-import hystudio.utils.CC;
+
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -23,11 +23,11 @@ public class world implements CommandExecutor, TabCompleter {
         }
         Player player = (Player)sender;
         if (args.length == 0) {
-            player.sendMessage(CC.translate(""));
+            player.sendMessage(dev.bopi.Utilidades.CC.translate(""));
                     player.sendMessage(deadcore.colorize("#aedddd Intenta utilizando:"));
             player.sendMessage(deadcore.colorize("#aedddd  - #c7f6d4/world day #bdbfbf- #ffffecEstablece de dia en el mundo actual"));
             player.sendMessage(deadcore.colorize("#aedddd  - #c7f6d4/world night #bdbfbf- #ffffecEstablece de noche en el dia actual "));
-            player.sendMessage(CC.translate(""));
+            player.sendMessage(dev.bopi.Utilidades.CC.translate(""));
             return true;
         }
         if (args.length >= 1) {

@@ -1,14 +1,16 @@
 package hystudio.tormenta;
 
 import hystudio.deadcore;
-import hystudio.utils.CC;
+import hystudio.utils.delay;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
+import org.bukkit.EntityEffect;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 public class Tormenta implements CommandExecutor {
@@ -26,22 +28,25 @@ public class Tormenta implements CommandExecutor {
         String locZ = String.valueOf(p.getLocation().getBlockZ());
         if (args[0].equalsIgnoreCase("1")){
             for (Player players : Bukkit.getOnlinePlayers()) {
-                players.sendTitle(CC.translate("&2&lTORMENTA TOXICA"),CC.translate("&fHa comenzado ten cuidado!"),20,20,20);
-                p.performCommand("bbt start tormenta");
-                world.setStorm(true);
-                world.setWeatherDuration(20*60*5);
-                Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "effect give @e[type=minecraft:iron_golem] minecraft:strength 100000 5 true");
-                Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "effect give @e[type=minecraft:enderman] minecraft:strength 100000 5 true");
-                Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "effect give @e[type=minecraft:zombie] minecraft:strength 100000 5 true");
-                Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "effect give @e[type=minecraft:piglin] minecraft:strength 100000 5 true");
-                Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "effect give @e[type=minecraft:husk] minecraft:strength 100000 5 true");
-                Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "effect give @e[type=minecraft:polar_bear] minecraft:strength 100000 5 true");
-                Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "effect give @e[type=minecraft:drowned] minecraft:strength 100000 5 true");
-                players.sendMessage(CC.translate(""));
-                players.sendMessage(CC.translate("&a&lMOBS | &fLos mobs han sido modificados &e⚠ Cuidado ⚠"));
-                players.sendMessage(CC.translate(""));
-                players.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(CC.translate("&2Tormenta Activada!")));
-                p.performCommand("owooniichan");
+                players.sendTitle(dev.bopi.Utilidades.CC.translate("&2&lTORMENTA TOXICA"), dev.bopi.Utilidades.CC.translate("&fHa comenzado ten cuidado!"),20,20,20);
+                players.sendMessage(dev.bopi.Utilidades.CC.translate(""));
+                players.sendMessage(dev.bopi.Utilidades.CC.translate("&a&lMOBS | &fLos mobs han sido modificados &e⚠ Cuidado ⚠"));
+                players.sendMessage(dev.bopi.Utilidades.CC.translate(""));
+                players.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(dev.bopi.Utilidades.CC.translate("&2Tormenta Activada!")));
+            }
+
+            p.performCommand("bbt start tormenta");
+            world.setStorm(true);
+            world.setWeatherDuration(20605);
+            for (Entity entity : world.getEntities()) {
+                entity.playEffect(EntityEffect.HURT);
+                new delay(() -> {
+                    for (Player players : Bukkit.getOnlinePlayers()) {
+
+                        /* Ahorita falta añadir efectos */
+                    }
+
+                }, 20 * 2);
             }
         }
         return false;

@@ -1,6 +1,5 @@
 package hystudio.chat;
 
-import hystudio.utils.CC;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
@@ -16,7 +15,7 @@ public class ChatUtil {
     private List<TextComponent> components = new ArrayList<>();
 
     public ChatUtil(String message) {
-        TextComponent component = new TextComponent(CC.translate(message));
+        TextComponent component = new TextComponent(dev.bopi.Utilidades.CC.translate(message));
 
         components.add(component);
     }
@@ -26,10 +25,10 @@ public class ChatUtil {
     }
 
     public ChatUtil copy(String message, String hover, String copy) {
-        TextComponent component = new TextComponent(CC.translate(message));
+        TextComponent component = new TextComponent(dev.bopi.Utilidades.CC.translate(message));
 
         if (hover != null) {
-            component.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(CC.translate(hover)).create()));
+            component.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(dev.bopi.Utilidades.CC.translate(hover)).create()));
         }
 
         if (copy != null) {
@@ -41,10 +40,10 @@ public class ChatUtil {
     }
 
     private void add(String message, String hover, String click) {
-        TextComponent component = new TextComponent(CC.translate(message));
+        TextComponent component = new TextComponent(dev.bopi.Utilidades.CC.translate(message));
 
         if (hover != null) {
-            component.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(CC.translate(hover)).create()));
+            component.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(dev.bopi.Utilidades.CC.translate(hover)).create()));
         }
 
         if (click != null) {

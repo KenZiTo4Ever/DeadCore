@@ -1,7 +1,6 @@
 package hystudio.commands;
 
 import hystudio.deadcore;
-import hystudio.utils.CC;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,26 +17,26 @@ public class HyHub implements Listener, CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command comando, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            CC.log("Este comando no se puede ejecutar en consola!");
+            dev.bopi.Utilidades.CC.log("Este comando no se puede ejecutar en consola!");
             return false;
         }
         Player p = (Player)sender;
         FileConfiguration config = this.plugin.getConfig();
         if (args.length == 0) {
-            p.sendMessage(CC.translate("&8&m--------------------------------------------"));
-            p.sendMessage(CC.translate(""));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&8&m--------------------------------------------"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate(""));
             p.sendMessage(deadcore.colorize("#fb0000&lD&#eb0505&lE&#db0909&lA&#cb0e0e&lD&#bb1313&lC&#ab1818&lO&#9b1c1c&lR&#8b2121&lE\n"));
-            p.sendMessage(CC.translate(""));
-            p.sendMessage(CC.translate("&b/Fly &f- Activa el modo de vuelo"));
-            p.sendMessage(CC.translate("&b/gm &f- Activa el modo de juego (0,1,2,3)"));
-            p.sendMessage(CC.translate("&b/set flyspawn &f- Poner el lobby"));
-            p.sendMessage(CC.translate("&b/world &f- (day / night) poner dia o noche"));
-            p.sendMessage(CC.translate("&b/heal &f- Cura tus heridas"));
-            p.sendMessage(CC.translate("&b/tpall &f- Manda a todos a tu posicion"));
-            p.sendMessage(CC.translate("&b/hyhub reload &f- Recarga la configuracion del plugin"));
-            p.sendMessage(CC.translate("&b/sb &f- Activa la scoreboad"));
-            p.sendMessage(CC.translate(""));
-            p.sendMessage(CC.translate("&8&m--------------------------------------------"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate(""));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/Fly &f- Activa el modo de vuelo"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/gm &f- Activa el modo de juego (0,1,2,3)"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/set flyspawn &f- Poner el lobby"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/world &f- (day / night) poner dia o noche"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/heal &f- Cura tus heridas"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/tpall &f- Manda a todos a tu posicion"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/hyhub reload &f- Recarga la configuracion del plugin"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&b/sb &f- Activa la scoreboad"));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate(""));
+            p.sendMessage(dev.bopi.Utilidades.CC.translate("&8&m--------------------------------------------"));
 
 
         } else if (args[0].equalsIgnoreCase("reload")) {

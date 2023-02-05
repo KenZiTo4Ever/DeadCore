@@ -1,7 +1,5 @@
 package hystudio.chat;
 
-import hystudio.utils.CC;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +29,6 @@ public class MessageUtil {
             message = message.replace(s, s2);
         }
 
-        return CC.translate(message);
+        return dev.bopi.Utilidades.CC.translate(message);
     }
 }

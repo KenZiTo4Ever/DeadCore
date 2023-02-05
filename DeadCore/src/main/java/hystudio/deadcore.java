@@ -11,7 +11,6 @@ import hystudio.events.PlayerJoin;
 import hystudio.events.PlayerQuit;
 import hystudio.gamemode.GamemodeCommand;
 import hystudio.tormenta.Tormenta;
-import hystudio.utils.CC;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
@@ -26,14 +25,14 @@ public final class deadcore extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        CC.log("&8&m------------------------------------------");
-        CC.log("");
-        CC.log("  &cDeadCore &aEncendido &fCreate by &3Hy Studio");
-        CC.log("Author: &bKenzii - Hy Studio");
-        CC.log("Version: &b1.0 BETA");
-        CC.log("Joined: &bhttps://discord.gg/gwGKjbQybh");
-        CC.log("");
-        CC.log("&8&m------------------------------------------");
+        dev.bopi.Utilidades.CC.log("&8&m------------------------------------------");
+        dev.bopi.Utilidades.CC.log("");
+        dev.bopi.Utilidades.CC.log("  &cDeadCore &aEncendido &fCreate by &3Hy Studio");
+        dev.bopi.Utilidades.CC.log("Author: &bKenzii - Hy Studio");
+        dev.bopi.Utilidades.CC.log("Version: &b1.0 BETA");
+        dev.bopi.Utilidades.CC.log("Joined: &bhttps://discord.gg/gwGKjbQybh");
+        dev.bopi.Utilidades.CC.log("");
+        dev.bopi.Utilidades.CC.log("&8&m------------------------------------------");
         RegisterCommands();
         registerConfig();
         RegisterEvents();
@@ -41,14 +40,14 @@ public final class deadcore extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        CC.log("&8&m------------------------------------------");
-        CC.log("");
-        CC.log("  &cDeadCore &cApagado &fCreate by &3Hy Studio");
-        CC.log("Author: &bKenzii - Hy Studio");
-        CC.log("Version: &b1.0 BETA");
-        CC.log("Joined: &bhttps://discord.gg/gwGKjbQybh");
-        CC.log("");
-        CC.log("&8&m------------------------------------------");
+        dev.bopi.Utilidades.CC.log("&8&m------------------------------------------");
+        dev.bopi.Utilidades.CC.log("");
+        dev.bopi.Utilidades.CC.log("  &cDeadCore &cApagado &fCreate by &3Hy Studio");
+        dev.bopi.Utilidades.CC.log("Author: &bKenzii - Hy Studio");
+        dev.bopi.Utilidades.CC.log("Version: &b1.0 BETA");
+        dev.bopi.Utilidades.CC.log("Joined: &bhttps://discord.gg/gwGKjbQybh");
+        dev.bopi.Utilidades.CC.log("");
+        dev.bopi.Utilidades.CC.log("&8&m------------------------------------------");
     }
     public void RegisterCommands() {
         getCommand("gm").setExecutor(new GamemodeCommand(this));
