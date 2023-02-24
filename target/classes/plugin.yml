@@ -1,0 +1,8 @@
+name: DeadCore
+version: '1.0-SNAPSHOT'
+main: wtf.kenziii.DeadCore
+api-version: 1.18
+authors: [ ItsKenziiiii ]
+description: Core de la serie de DeadCraft
+commands:
+  timer:
